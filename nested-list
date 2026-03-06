@@ -1,0 +1,15 @@
+students=[]
+    for _ in range(int(input())):
+       
+        name = input()
+        score = float(input())
+        students.append([name,score])
+
+score = [student[1] for student in students]
+
+unique_score = sorted(set(score))
+second_lowest = unique_score[1]
+
+result = [student[0] for student in students if student[1] == second_lowest]
+
+result.sort()
